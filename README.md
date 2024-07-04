@@ -32,7 +32,7 @@ For example,
 sudo docker run -it --name sauv-container --device /dev/i2c-7 -v /home/selenas/SAUV:/SAUV selenasun1618/ros2_humble:latest
 ```
     
-    Note: You need the `--device` flag to access the i2c bus for the IMU.
+Note: You need the `--device` flag to access the i2c bus for the IMU.
 
 You should now see a Docker container running in the `SAUV` folder. Navigate to the `SAUV-Autonomy` folder to start developing.
 
