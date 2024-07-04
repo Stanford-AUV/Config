@@ -45,7 +45,8 @@ sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SA
 ```
 To run other termainals in the same container (and the same ROS2 network), use the following command: 
 ```
-docker exec -it [container name] bash```
+docker exec -it [container name] bash
+```
 
 2. In every new terminal, run the following commands:
 ```
