@@ -21,6 +21,7 @@ SAUV/
 ```
 
 4. Build the image: ```sudo docker run -it --device /dev/i2c-7 -v path/to/local/SAUV/folder:/SAUV selenasun1618/ros2_humble:latest```
+    
     Note: You need the `--device` flag to access the i2c bus for the IMU.
 
 # Usage
