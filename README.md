@@ -60,8 +60,8 @@ If you added a new package to the image (in Dockerfile.ros2_humble), you need to
 
 1. Rebuild the docker image: 
 ```
-   docker build -t selenasun1618_ros2_humble:latest .
-   ```
+docker build -t selenasun1618_ros2_humble:latest .
+```
 
 Either notify Selena that you've updated the Dockerfile, or push yourself:
 
