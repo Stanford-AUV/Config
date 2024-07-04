@@ -10,7 +10,8 @@ Contains Docker configs for running ROS2 Humble on our autonomy stack, SAUV-Auto
 
 3. Create & move the necessary folders so your folder structure is as follows:
 
-```SAUV/
+```
+SAUV/
 |-- SAUV-Autonomy/
     |-- src/
     |-- ...
