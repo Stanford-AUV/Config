@@ -10,13 +10,14 @@ Contains Docker configs for running ROS2 Humble on our autonomy stack, SAUV-Auto
 
 3. Create & move the necessary folders so your folder structure is as follows:
 
-SAUV/
+```SAUV/
 |-- SAUV-Autonomy/
     |-- src/
     |-- ...
 |-- SAUV-Config/
     |-- Dockerfile.ros2_humble
     |-- ...
+```
 
 4. Build the image: ```sudo docker run -it --device /dev/i2c-7 -v path/to/local/SAUV/folder:/SAUV selenasun1618/ros2_humble:latest```
     Note: You need the `--device` flag to access the i2c bus for the IMU.
