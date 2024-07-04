@@ -58,7 +58,8 @@ source /SAUV/SAUV-Autonomy/install/setup.bash
 
 If you added a new package to the image (in Dockerfile.ros2_humble), you need to update the image.
 
-1. Rebuild the docker image: ```
+1. Rebuild the docker image: 
+```
    docker build -t selenasun1618_ros2_humble:latest .
    ```
 
