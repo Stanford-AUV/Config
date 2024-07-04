@@ -56,6 +56,7 @@ apt-get update && apt-get install -y \
 
 # ROS Python fundamentals
 RUN python3 -m pip install -U \
+        smbus2 \
         flake8-blind-except \
         flake8-builtins \
         flake8-class-newline \
