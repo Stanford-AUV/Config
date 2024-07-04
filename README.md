@@ -24,9 +24,11 @@ SAUV/
 ```
 
 4. Run the image: 
-```sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SAUV-folder]:/SAUV selenasun1618/ros2_humble:latest
 ```
-For example, ```sudo docker run -it --name sauv-container --device /dev/i2c-7 -v /home/selenas/SAUV:/SAUV selenasun1618/ros2_humble:latest```
+sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SAUV-folder]:/SAUV selenasun1618/ros2_humble:latest
+```
+For example, ```
+sudo docker run -it --name sauv-container --device /dev/i2c-7 -v /home/selenas/SAUV:/SAUV selenasun1618/ros2_humble:latest```
     
     Note: You need the `--device` flag to access the i2c bus for the IMU.
 
