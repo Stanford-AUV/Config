@@ -39,7 +39,9 @@ You should now see a Docker container running in the `SAUV` folder. Navigate to 
 
 # Usage
 
-1. To run the image in the first terminal, use the above command. Here it is again: ```sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SAUV-folder]:/SAUV selenasun1618/ros2_humble:latest
+1. To run the image in the first terminal, use the above command. Here it is again: 
+```
+sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SAUV-folder]:/SAUV selenasun1618/ros2_humble:latest
 ```
 To run other termainals in the same container (and the same ROS2 network), use the following command: ```docker exec -it [container name] bash```
 
