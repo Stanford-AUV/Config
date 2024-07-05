@@ -25,10 +25,6 @@ SAUV/
 
 4. Run the image: 
 ```
-sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SAUV-folder]:/SAUV selenasun1618/ros2_humble:latest
-```
-For example, 
-```
 sudo docker run -it --name sauv-container --device /dev/i2c-7 -v /home/selenas/SAUV:/SAUV selenasun1618/ros2_humble:latest
 ```
     
@@ -39,16 +35,21 @@ You should now see a Docker container running in the `SAUV` folder. Navigate to 
 
 # Usage
 
-1. To run the image in the first terminal, use the above command. Here it is again: 
+1. To pull the latest image, run: 
 ```
-sudo docker run -it --device --name [image name] /dev/i2c-7 -v [path-to-local-SAUV-folder]:/SAUV selenasun1618/ros2_humble:latest
+docker pull selenasun1618/ros2_humble:latest
+```
+
+2. To run the image in the first terminal, run the following command, changing `~/SAUV` to the path to your SAUV folder:
+```
+sudo docker run -it --name sauv_contianer --device=/dev/ttyUSB0 --device=/dev/i2c-7 -v ~/SAUV:/SAUV selenasun1618/ros2_humble:latest
 ```
 To run other termainals in the same container (and the same ROS2 network), use the following command: 
 ```
 docker exec -it [container name] bash
 ```
 
-2. In every new terminal, run the following commands:
+3. In every new terminal, run the following commands:
 ```
 source /opt/ros/humble/setup.bash
 source /SAUV/SAUV-Autonomy/install/setup.bash
