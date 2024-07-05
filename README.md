@@ -56,14 +56,14 @@ source /SAUV/SAUV-Autonomy/install/setup.bash
 
 # Updating the Docker image
 
-If you added a new package to the image (in Dockerfile.ros2_humble), you need to update the image.
+If you added a new package to the image (in `Dockerfile.ros2_humble`), you need to update the image.
 
 1. Rebuild the docker image: 
 ```
-docker build -t selenasun1618_ros2_humble:latest .
+docker build -t selenasun1618/ros2_humble:latest .
 ```
 
-Either notify Selena that you've updated the Dockerfile, or push yourself:
+Push the image to docker hub, after asking Selena to add you as a collaborator:
 
 2. Log into Docker hub: 
 ```
