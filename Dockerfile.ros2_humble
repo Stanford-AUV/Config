@@ -213,6 +213,7 @@ apt-get update && apt-get install -y \
     ros-humble-srdfdom \
     ros-humble-tf2-eigen \
     ros-humble-tf2-geometry-msgs \
+    ros-humble-tf-transformations \
     ros-humble-tf2-ros \
     ros-humble-topic-based-ros2-control \
     ros-humble-ur-description \
