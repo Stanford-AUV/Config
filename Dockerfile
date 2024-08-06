@@ -124,7 +124,8 @@ apt-get update && apt-get install -y \
     ros-humble-v4l2-camera \
     ros-humble-vision-opencv \
     ros-humble-vision-msgs \
-    ros-humble-vision-msgs-rviz-plugins
+    ros-humble-vision-msgs-rviz-plugins \
+    ros-humble-depthai-ros
 
 # Setup rosdep
 COPY rosdep/extra_rosdeps.yaml /etc/ros/rosdep/sources.list.d/nvidia-isaac.yaml
