@@ -66,7 +66,7 @@ RUN python3 -m pip install -U \
         pandas \
         rosbags \
         setuptools==65.7.0 \
-        torch-2.1.0-cp310-cp310-linux_aarch64.whl \
+        jetson-stats \
         ultralytics[export]
 
 
@@ -125,7 +125,9 @@ apt-get update && apt-get install -y \
     ros-humble-vision-opencv \
     ros-humble-vision-msgs \
     ros-humble-vision-msgs-rviz-plugins \
-    ros-humble-depthai-ros
+    ros-humble-depthai-ros \
+    ros-humble-nmea-msgs \
+    ros-humble-mavros-msgs
 
 # Setup rosdep
 COPY rosdep/extra_rosdeps.yaml /etc/ros/rosdep/sources.list.d/nvidia-isaac.yaml
