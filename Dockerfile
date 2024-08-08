@@ -53,6 +53,7 @@ apt update && apt install -y \
         
 
 # ROS Python fundamentals
+<<<<<<< Updated upstream
 RUN apt install -y \
         python3-flake8-blind-except \
         python3-flake8-builtins \
@@ -72,6 +73,17 @@ RUN apt install -y \
 
 # Python Packages
 RUN python3 -m pip install -y \
+=======
+RUN python3 -m pip install -U \
+        flake8-blind-except \
+        flake8-builtins \
+        flake8-class-newline \
+        flake8-comprehensions \
+        flake8-deprecated \
+        flake8-docstrings \
+        flake8-import-order \
+        flake8-quotes \
+>>>>>>> Stashed changes
         numpy>=1.24.4 \
         matplotlib \
         pandas \
