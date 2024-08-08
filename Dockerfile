@@ -71,13 +71,17 @@ RUN python3 -m pip install -U \
         rosbags \
         setuptools==65.7.0 \
         jetson-stats \
-        ultralytics[export] \
         transforms3d \
         smbus2 \
         scipy \
         libusb1 \
         pyserial \
         simple_pid
+
+
+# Perception package
+RUN python3 -m pip install -U \
+        ultralytics[export]
 
 # Install ROS 2 Humble
 RUN --mount=type=cache,target=/var/cache/apt \
