@@ -147,9 +147,9 @@ RUN --mount=type=cache,target=/var/cache/apt \
     && rosdep update
 
 # Install torch
-RUN wget https://nvidia.box.com/shared/static/0h6tk4msrl9xz3evft9t0mpwwwkw7a32.whl -0 /tmp/torch.whl \
-    pip install /tmp/torch.whl \
-    rm /tmp/torch.whl
+RUN wget https://nvidia.box.com/shared/static/0h6tk4msrl9xz3evft9t0mpwwwkw7a32.whl -O /tmp/torch.whl \
+    && pip install /tmp/torch.whl \
+    && rm /tmp/torch.whl
 
 # Install torch vision
 RUN git clone https://github.com/pytorch/vision /tmp/torchvision && \
