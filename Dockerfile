@@ -147,7 +147,7 @@ RUN --mount=type=cache,target=/var/cache/apt \
     && rosdep update
 
 # Install torch
-RUN wget https://nvidia.box.com/shared/static/0h6tk4msrl9xz3evft9t0mpwwwkw7a32.whl -O /tmp/torch.whl \
+RUN wget -O /tmp/torch.whl https://nvidia.box.com/shared/static/0h6tk4msrl9xz3evft9t0mpwwwkw7a32.whl \
     && pip install /tmp/torch.whl \
     && rm /tmp/torch.whl
 
