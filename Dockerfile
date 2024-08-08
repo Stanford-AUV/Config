@@ -61,13 +61,7 @@ RUN apt-get install -y \
         python3-flake8-import-order \
         python3-flake8-quotes \
         python3-pytest-repeat \
-        python3-pytest-rerunfailures \
-        transforms3d \
-        python3-smbus \
-        scipy \
-        libusb1 \
-        pyserial \
-        simple_pid
+        python3-pytest-rerunfailures
 
 # Python Packages
 RUN python3 -m pip install -U \
@@ -77,7 +71,13 @@ RUN python3 -m pip install -U \
         rosbags \
         setuptools==65.7.0 \
         jetson-stats \
-        ultralytics[export]
+        ultralytics[export] \
+        transforms3d \
+        python3-smbus \
+        scipy \
+        libusb1 \
+        pyserial \
+        simple_pid
 
 # Install ROS 2 Humble
 RUN --mount=type=cache,target=/var/cache/apt \
