@@ -141,7 +141,8 @@ apt-get update && apt-get install -y \
     ros-humble-vision-msgs-rviz-plugins \
     ros-humble-depthai-ros \
     ros-humble-nmea-msgs \
-    ros-humble-mavros-msgs
+    ros-humble-mavros-msgs \
+    ros-humble-robot-localization
 
 # Setup rosdep
 COPY rosdep/extra_rosdeps.yaml /etc/ros/rosdep/sources.list.d/nvidia-isaac.yaml
