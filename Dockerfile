@@ -31,7 +31,7 @@ RUN apt-get update && apt-get install -y curl gnupg2 lsb-release \
 
 # ROS fundamentals
 RUN --mount=type=cache,target=/var/cache/apt \
-apt-get update && apt-get install -y \
+apt update && apt install -y \
         devscripts \
         dh-make \
         fakeroot \
@@ -45,22 +45,33 @@ apt-get update && apt-get install -y \
         python3-rosinstall-generator \
         python3-vcstool \
         quilt \
+        ros-dev-tools \
         libopenblas-base \
         libopenmpi-dev \
         libjpeg-dev \
-        zlib1g-dev
+        zlib1g-dev \
+        
 
 # ROS Python fundamentals
-RUN python3 -m pip install -U \
-        smbus2 \
-        flake8-blind-except \
-        flake8-builtins \
-        flake8-class-newline \
-        flake8-comprehensions \
-        flake8-deprecated \
-        flake8-docstrings \
-        flake8-import-order \
-        flake8-quotes \
+RUN apt install -y \
+        python3-flake8-blind-except \
+        python3-flake8-builtins \
+        python3-flake8-class-newline \
+        python3-flake8-comprehensions \
+        python3-flake8-deprecated \
+        python3-flake8-import-order \
+        python3-flake8-quotes \
+        python3-pytest-repeat \
+        python3-pytest-rerunfailures \
+        transforms3d \
+        python3-smbus \
+        scipy \
+        libusb1 \
+        pyserial \
+        simple_pid
+
+# Python Packages
+RUN python3 -m pip install -y \
         numpy>=1.24.4 \
         matplotlib \
         pandas \
@@ -85,6 +96,7 @@ apt-get update && apt-get install -y \
     ros-humble-cv-bridge \
     ros-humble-demo-nodes-cpp \
     ros-humble-demo-nodes-py \
+    ros-humble-desktop \
     ros-humble-diagnostic-aggregator \
     ros-humble-diagnostic-updater \
     ros-humble-example-interfaces \
