@@ -73,7 +73,7 @@ RUN python3 -m pip install -U \
         jetson-stats \
         ultralytics[export] \
         transforms3d \
-        python3-smbus \
+        smbus2 \
         scipy \
         libusb1 \
         pyserial \
