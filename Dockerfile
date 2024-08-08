@@ -78,11 +78,6 @@ RUN python3 -m pip install -U \
         pyserial \
         simple_pid
 
-
-# Perception package
-RUN python3 -m pip install -U \
-        ultralytics[export]
-
 # Install ROS 2 Humble
 RUN --mount=type=cache,target=/var/cache/apt \
 apt-get update && apt-get install -y \
@@ -161,3 +156,7 @@ RUN git clone https://github.com/pytorch/vision /tmp/torchvision && \
     cd /tmp/torchvision && \
     git checkout v0.16.2 && \
     python3 setup.py install --user
+
+# Perception package
+RUN python3 -m pip install -U \
+    ultralytics[export]
