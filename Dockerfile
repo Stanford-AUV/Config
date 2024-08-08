@@ -49,7 +49,7 @@ apt-get update && apt-get install -y \
         libopenblas-base \
         libopenmpi-dev \
         libjpeg-dev \
-        zlib1g-dev \
+        zlib1g-dev
         
 # ROS Python fundamentals
 RUN apt-get install -y \
